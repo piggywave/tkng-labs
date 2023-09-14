@@ -8,5 +8,5 @@ spec:
   interval: 1m0s
   ref:
     branch: master
-  url: https://github.com/networkop/k8s-guide-labs
+  url: https://github.com/piggywave/tkng-labs
 
