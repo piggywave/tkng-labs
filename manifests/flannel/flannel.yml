@@ -197,7 +197,7 @@ spec:
         - /opt/bin
         - /opt/cni/
         volumeMounts:
-        - name: bin
+        - name: cni-plugin
           mountPath: /opt/cni/bin
 ##### By default kind only includes a small subset of them
       priorityClassName: system-node-critical
