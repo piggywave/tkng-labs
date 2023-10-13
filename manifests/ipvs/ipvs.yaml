@@ -13,15 +13,19 @@ data:
     clusterCIDR: 10.244.0.0/16
     configSyncPeriod: 0s
     conntrack:
-      maxPerCore: null
+      maxPerCore: 0
       min: null
       tcpCloseWaitTimeout: null
       tcpEstablishedTimeout: null
+    detectLocal:
+      bridgeInterface: ""
+      interfaceNamePrefix: ""
     detectLocalMode: ""
     enableProfiling: false
     healthzBindAddress: ""
     hostnameOverride: ""
     iptables:
+      localhostNodePorts: null
       masqueradeAll: false
       masqueradeBit: null
       minSyncPeriod: 1s
@@ -42,10 +46,11 @@ data:
     oomScoreAdj: null
     portRange: ""
     showHiddenMetricsForVersion: ""
-    udpIdleTimeout: 0s
     winkernel:
       enableDSR: false
+      forwardHealthCheckVip: false
       networkName: ""
+      rootHnsEndpointName: ""
       sourceVip: ""
   kubeconfig.conf: |-
     apiVersion: v1

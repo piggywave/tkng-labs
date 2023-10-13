@@ -2,16 +2,17 @@
 
 KIND_CLUSTER_NAME ?= k8s-guide
 KIND_NETWORK:=kind
+KIND_CONF:=--config ./kind.yaml
 export KUBECONFIG=kubeconfig
 
-ifeq (,$(wildcard ./kind.yaml))
-KIND_CONF:=  
-else
-KIND_CONF:=--config ./kind.yaml
-endif
+# ifeq (,$(wildcard ./kind.yaml))
+# KIND_CONF:=  
+# else
+# KIND_CONF:=--config ./kind.yaml
+# endif
 
 kind-install: 
-	GO111MODULE="on" go get -u sigs.k8s.io/kind@v0.9.0
+	GO111MODULE="on" go get -u sigs.k8s.io/kind@v0.19.0
 
 
 kind-stop: 
